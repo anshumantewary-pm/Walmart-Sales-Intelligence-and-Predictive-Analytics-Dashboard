@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data & models
+data/raw/
+data/processed/
+models/
+*.pkl
+*.joblib
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/secrets.toml
