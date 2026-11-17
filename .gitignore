@@ -10,9 +10,11 @@ venv/
 .ipynb_checkpoints/
 
 # Data & models
-data/raw/
-data/processed/
-models/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+/models/
 *.pkl
 *.joblib
 
@@ -23,3 +25,5 @@ models/
 
 # Streamlit
 .streamlit/secrets.toml
+data/sample/
+reports/experiments.csv
