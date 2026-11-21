@@ -100,9 +100,18 @@ pre-commit install   # auto-lint on every commit
 
 CI runs lint, the test suite and a synthetic pipeline run on every push to `main` and on every pull request.
 
-## Key findings
+## Results
 
-_Run the pipeline on the real data and record the top 5 findings here, with numbers. For example: holiday lift by store type, whether markdowns pull demand forward, which macro factors matter, and the forecast's improvement over the seasonal-naive baseline._
+No results from the real dataset are committed yet: `data/raw/` and `reports/` contain only placeholders, so there are no headline figures to quote. Running the pipeline produces:
+
+- Model comparison (seasonal naive, moving average, gradient boosting) on WMAE, MAE, RMSE and 80%-range coverage
+- Holiday lift by store type and the markdown pull-forward effect
+- Within-store correlations with temperature, fuel price, CPI and unemployment
+- Store segments with a suggested action for each, and the estimated inventory cost of forecast error
+
+## Tools & tech
+
+Python · pandas · NumPy · scikit-learn (HistGradientBoostingRegressor, k-means, permutation importance) · Streamlit · Plotly · pytest · ruff · pre-commit · Docker · GitHub Actions
 
 ## Roadmap
 
@@ -111,11 +120,14 @@ _Run the pipeline on the real data and record the top 5 findings here, with numb
 - [x] Business insights: holiday lift, markdowns, macro factors, segments, inventory cost
 - [x] Streamlit dashboard with what-if simulator
 - [x] Tests, CI, pre-commit, Docker
-- [ ] Run on the real Walmart data and fill in *Key findings*
+- [ ] Run on the real Walmart data and publish the results
 - [ ] Deploy to Streamlit Community Cloud and add the live link + screenshots/GIF here
 - [ ] Try LightGBM/Prophet and tune hyperparameters, logged in `reports/experiments.csv`
-- [ ] Optional: natural-language Q&A over the data with an LLM
 
 ## License
 
 Released under the [MIT License](LICENSE).
+
+---
+
+Anshuman Tewary · [GitHub](https://github.com/anshumantewary-pm) · [LinkedIn](https://www.linkedin.com/in/tewary-anshuman/)
